@@ -2,7 +2,7 @@
 
 final class Topic extends Model
 {
-    protected $table_name = 'topic';
+    protected string $table_name = 'topic';
 
     public static function getAll() : array | false
     {

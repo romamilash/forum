@@ -1,0 +1,119 @@
+main {
+  background-color: $background-main;
+  padding: 40px 0;
+}
+
+section {
+  width: 100%;
+  margin: 0 20px;
+}
+
+.add-new {
+  @include border;
+  background-color: white;
+  margin-bottom: 20px;
+
+  &__text {
+    display: flex;
+
+    img {
+      width: 60px;
+      padding: 15px;
+    }
+
+    textarea {
+      width: 100%;
+      border: none;
+      background-color: white;
+      resize: none;
+      appearance: textfield;
+      padding-top: 20px;
+      padding-left: 10px;
+      border-radius: 0 10px 0 0;
+
+      &::placeholder {
+        color: rgb($dark_gray, 0.5);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__attachment {
+    display: flex;
+    background-color: $background-main;
+    border-top: 1px solid $light_gray;
+    padding: 10px 15px;
+    border-radius: 0 0 10px 10px;
+
+    div {
+      margin-right: 15px;
+
+      > input {
+        display: none;
+      }
+
+      i {
+        font-size: 18px;
+      }
+    }
+
+    button {
+      margin-left: 15px;
+    }
+  }
+}
+
+.post-nav {
+  ul {
+    @include vertical-center;
+
+    li {
+      margin-right: 20px;
+
+      &:last-of-type {
+        margin-right: 0;
+        margin-left: auto;
+      }
+
+      a {
+        color: $dark-gray;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 27px;
+        padding: 8px 0;
+
+        &.active {
+          font-weight: 700;
+          border-bottom: 2px solid $primary;
+        }
+      }
+    }
+  }
+
+  .has-search {
+    .form-control {
+      padding-left: 2.375rem;
+      border-color: $light_gray;
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: $light_gray;
+      }
+    }
+
+    .form-control-feedback {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      width: 2.375rem;
+      height: 2.375rem;
+      line-height: 2.375rem;
+      text-align: center;
+      pointer-events: none;
+      color: #aaa;
+    }
+  }
+}
